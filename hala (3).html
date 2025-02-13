@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يا قمر دمشق 🌹 | عيد حب سعيد</title>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(45deg, #ff99cc, #ff4d4d);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 200vh; /* زيادة ارتفاع الصفحة للتمرير */
+        }
+
+        h1 {
+            color: #cc0000;
+            font-size: 55px;
+            animation: pulse 1.5s infinite, floatTitle 3s ease-in-out infinite;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 26px;
+            color: #4d0000;
+            margin: 15px 0;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+        .hidden-message {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            background: rgba(204, 0, 0, 0.9);
+            padding: 35px;
+            border-radius: 20px;
+            margin: 30px auto;
+            max-width: 700px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            line-height: 1.8;
+            animation: messageFade 1.5s ease-out;
+            border: 2px solid #ffcccc;
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff1a1a, #cc0000);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 24px;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        iframe {
+            display: none;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            width: 90%; /* لجعله متجاوبًا مع الجوال */
+            max-width: 300px;
+            height: 150px;
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            font-size: 30px;
+            color: #cc0000;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes floatTitle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes messageFade {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-150px) rotate(180deg); }
+            100% { transform: translateY(-300px) rotate(360deg); }
+        }
+
+        @keyframes drift {
+            0% { transform: translateX(-100%) rotate(0deg); }
+            100% { transform: translateX(100vw) rotate(720deg); }
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1.5); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+
+        /* تصميم متجاوب للجوال */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 22px;
+            }
+            .hidden-message {
+                font-size: 20px;
+                padding: 20px;
+            }
+            button {
+                font-size: 20px;
+                padding: 15px 30px;
+            }
+            iframe {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🌹 يلي مابعرف عيش من دونك يا زهرة دمشق 🌹</h1>
+    <p>كل عيد حب وقلبي مِسَيّرلك طايره 💌</p>
+    <p>يا رب دايما تفضلي عمري وأجمل هدية ربنا عطاني ياها 😇</p>
+
+    <button onclick="showMessage()">إضغطي هون يا قمر 🎁</button>
+    <div class="hidden-message" id="message">
+        <span style="font-size:28px; display:block; margin-bottom:15px;">💌 رسالة من القلب للقلب 💌</span>
+        
+        يا حبيبتي العزيزة، يلي خدتيني من إيدي وسحبتيني لعالمك الحلو،<br>
+        والله يا عمري مافي شي بيسوى بالدنيا غير لما تكوني جنبي،<br>
+        كل يوم بيكبر حبيلك أكتر، وكل يوم بكتشف إنه مافي حد بالكون زيك.<br><br>
+        
+        بدي أقولك إنه كل الوعود يلي قطعتها قدامك رح أوفي فيها،<br>
+        سواء الفرح يلي جاي، التحديات، ولا حتى الأحلام الكبيرة،<br>
+        رح نعيشها سوا خطوة خطوة، وإنتي رح تكوني دايما جنبي.<br><br>
+        
+        بعرف إنه في كتير أحيانًا بقصر معك، بس والله النية موجودة،<br>
+        وإنتي يلي علمتني إنه الحب الحقيقي هو التضحية والإحترام،<br>
+        هالعلاقة يلي بنيناها سوا هي أغلى إشي عندي بالحياة.<br><br>
+        
+        <span style="display:inline-block; animation: pulse 2s infinite; margin:15px 0;">🌸🌸🌸</span><br>
+        
+        يزمتي يا أحلى بنت بالكون،<br>
+        رح أضل دايما سندك وقت الضيق،<br>
+        ورح أحميكي مثل ما بحمي عيوني من الهوا،<br>
+        ورح أضل أفتخر فيكي قدام العالم كله.<br><br>
+        
+        <i>"كل وعد وعدتهولك هحققهولك متخافيش"</i><br>
+        هالكلام مش بس أغنية، هو عهد بيناتنا رح أسمعه كل يوم،<br>
+        وإنتي رح تفضلي دايما نجمتي يلي بضيي الدنيا قدامي.<br><br>
+        
+        💕 خلقك اللي بده يشوفك أسعد إمرة بالعالم 💕
+    </div>
+
+    <iframe
+        id="youtube-audio"
+        width="300"
+        height="150"
+        src="https://www.youtube.com/embed/OVDSMLRnyIM?autoplay=1&controls=0&loop=1&playlist=OVDSMLRnyIM"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+
+    <div class="scroll-indicator">⬇️</div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById('message');
+            const iframe = document.getElementById('youtube-audio');
+            
+            // إظهار العناصر
+            message.style.display = 'block';
+            iframe.style.display = 'block';
+            
+            // تطبيق أنيميشن الظهور
+            setTimeout(() => {
+                message.style.opacity = '1';
+                message.style.transform = 'translateY(0)';
+                iframe.style.opacity = '1';
+                
+                // التمرير التلقائي
+                message.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }, 100);
+            
+            // إخفاء مؤشر التمرير
+            document.querySelector('.scroll-indicator').style.display = 'none';
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = ['❤️', '💖', '💘'][Math.floor(Math.random()*3)];
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            heart.style.fontSize = (30 + Math.random() * 30) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+
+        function createFlower() {
+            const flower = document.createElement('div');
+            flower.classList.add('flower');
+            flower.innerHTML = ['🌸', '🌺', '🌼'][Math.floor(Math.random()*3)];
+            flower.style.top = Math.random() * window.innerHeight + 'px';
+            flower.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(flower);
+            setTimeout(() => flower.remove(), 7000);
+        }
+
+        function createSparkles() {
+            for(let i=0; i<50; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.innerHTML = '✨';
+                sparkle.style.left = Math.random() * window.innerWidth + 'px';
+                sparkle.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        }
+
+        // تشغيل الأنيميشنات
+        setInterval(createHeart, 200);
+        setInterval(createFlower, 500);
+    </script>
+</body>
+</html>
